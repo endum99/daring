@@ -1,84 +1,110 @@
-* {
-    padding: 0; 
+*{
+    padding: 0;
     margin: 0;
 }
 body {
-    background: #ddd;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: wheat;
     font-size: 16px;
-    padding: 15px;
+    font-family: "Work Sans", sans-serif;
+    padding: 20px;
     text-align: center;
 }
-.profil {
-    margin-bottom: 20px;
-    background: rgb(199, 95, 95);
-    padding: 20px;
-    border-radius: 15px;
+
+/* tombol*/
+.wa, .musik, .k7, .k8, .k9, .qris {
+    position: fixed;
+    right: 20px;
 }
-.profil img {
-    width: 250px;
-    border-radius: 50%;
-    border: 3px solid black;
-}
-.profil h3 {
-    margin-bottom: 15px;
-}
-a {
+.wa a, .musik a, .k7 a, .k8 a, .k9 a, .qris a {
+    color: black;
     text-decoration: none;
-    color: white;
-    background: red;
-    padding: 4px 7px;
-    border-radius: 4px;
+    background: white;
     border: 1px solid black;
+    padding: 3px 7px; 
+    border-radius: 6px;
 }
-a:hover {
+.wa a:hover, .musik a:hover, .k7 a:hover, .k8 a:hover, .k9 a:hover, .qris a:hover {
+    background: red;
+    color: white;
+}
+.wa {top: 20px;}
+.musik {top: 80px;}
+.k7 {top: 140px;} 
+.k8 {top: 200px;}
+.k9 {top: 260px;}
+.qris {top: 320px;}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* utama */
+.utama img {
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 8px 18px 0 black;
+}
+
+/* k7 */
+#k7 {
+    padding: 20px;
+    border-radius: 5px;
+}
+#k7 h3, #k9 .foto h3 {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+#k7 p, #k9 .foto p {
+    margin: 10px;
+}
+#k7 img,  #k9 .foto img{
+    width: 250px;
+    margin-bottom: 10px;
+}
+#k7 a, #k9 .foto a {
+    color:  black;
+    background: white;
+    border: 1px solid black;
+    padding: 3px 7px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+#k7 a:hover, #k9 .foto a:hover {background: red; color: white;}
+
+/* k9 */
+#k9 .foto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#k9 .naskah a {
+    margin-bottom: -20px;
+}
+#k9 .naskah .container {
+    border-radius: 12px;
+    text-align: center;
+}
+#k9 button {
+    padding: 3px 7px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
     background: white;
     color: black;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.mapel {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid rgb(199, 95, 95);            
-}
-.materi {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.kelas {
-    background: rgb(199, 95, 95);
-    padding: 20px;
-    width: 300px;
-    border-radius: 15px;
-    margin-top: 10px;
-
-}
-.kelas h3 {
-    margin-bottom: 20px;
-}
-.pajak {
-    background-color: wheat;
-    padding: 20px;
-    border: 2px solid black;
-}
-.pajak img {
-    margin-bottom: 20px;
-    box-shadow: 0px 8px 16px 0px black;
-    border-radius: 7px;
-}
-.pajak p {
-    font-size: 17px;
-    color: red;
-}
-.uh {
-    background-color: rgb(245, 187, 79);
-    padding: 20px;
-    margin-top: 20px;
-    border: 2px solid black;
-}
-.uh h3 {
-    margin-bottom: 30px;
+#k9 button:hover {
+    color: white;
+    background: red;
+    transform: scale(1.05);
 }
 
+
+/* qris */
+#qris img {
+    width: 250px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
