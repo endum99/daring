@@ -3,40 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Online 07</title>
-    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <title>dum</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="wa"><a href="http://wa.me/6285817183539" target="_blank">Whatsapp</a></div>
+    <div class="musik"><a href="https://mtsattaqwa07.sch.id/" target="_blank">MTs Attaqwa-07</a></div>
+    <div class="k7"><a href="#k7">Kelas 7</a></div>
+    <div class="k8"><a href="#k8">Kelas 8</a></div>
+    <div class="k9"><a href="#k9">Kelas 9</a></div>
+    <div class="qris"><a href="#qris">Qris</a></div>
+    
     <div class="container">
-
-        <!-- profil -->
-        <div class="profil">
-            <img src="img/icon.jpg" alt="">
-            <h3>Dumyati, S.PdI</h3>
-            <a href="https://wa.me/+6285817183539" target="_blank">Whatsapp</a>
+        <div class="utama">
+            <img src="img/dum.png" alt="dum" style="margin-bottom: 13px;"> <br>
+            <p>Teacher | Creator</p>
         </div>
 
-        <!-- kelas -->
-        <div class="mapel">
-            <h2>PILIH KELAS</h2>
-            <div class="materi">
-                <div class="kelas">
-                    <h3>Kelas 7</h3>
-                    <a href="7.html">Buka</a>
-                </div>
-                <div class="kelas">
-                    <h3>Kelas 8</h3>
-                    <a href="8.html">Buka</a>
-                </div>
-                <div class="kelas">
-                    <h3>Kelas 9</h3>
-                    <a href="9.html">Buka</a>
+        <div id="k7">
+            <h3>Kelas 7</h3>
+            <p><b>Tugas</b> <br>
+            Buatlah video mencontohkan gerakan senam berikut ini. Kirim via whatsapp.
+            </p>
+            <img src="img/senam.png" alt="senam"> <br>
+            <a href="https://youtu.be/m0c7samYQtQ?si=NVqRmIrqFHU_0VNr" target="_blank">Lihat Video</a>
+        </div>
+
+        <div id="k9">
+            <div class="foto">
+                <h3>Kelas 9</h3>
+                <p><b>Tugas</b><br>Buatlah video pembacaan berita. Pakaian seragam pramuka. Kirim via whatsapp. Ma </p>
+                <img src="img/berita.png" alt="berita"> <br>
+                <a href="https://youtu.be/6PYbvlAs6xU?si=auYfL2PlQcrXuwI7" target="_blank">Lihat Video</a>
+            </div>
+            <div class="naskah">
+                <div class="container">
+                    <p><b>Materi Berita</b></p>
+                    <a href="img/naskah.jpg" download target="_blank">
+                        <button>Download</button>
+                    </a>
                 </div>
             </div>
-        </div> 
-        
+        </div>
+
+        <!-- qris -->
+        <div id="qris">
+            <img src="img/qris.jpeg" alt="qris">
+        </div>
     </div>
+
+    <!-- script -->
+    <script>
+        function downloadFile() {
+            const text = "Halo! Ini adalah file yang diunduh menggunakan HTML, CSS, dan JavaScript.";
+            const blob = new Blob([text], { type: "text/plain" });
+            const url = window.URL.createObjectURL(blob);
+    
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "img/naskah.jpg";
+            document.body.appendChild(a);
+            a.click();
+    
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
 </body>
 </html>
