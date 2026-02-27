@@ -74,6 +74,7 @@ body {
 #k7 a:hover, #k9 .foto a:hover {background: red; color: white;}
 
 /* k9 */
+#k9 {margin-bottom: 20px;}
 #k9 .foto {
     text-align: center;
     margin-bottom: 20px;
